@@ -5,29 +5,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class QuestionTwo extends JFrame{
+public class QuestionFour extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("Rabbits");
+	private JButton button = new JButton("Alchohol");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("Clowns");
+	private JButton button1 = new JButton("Farting");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("Pirates");
+	private JButton button2 = new JButton("Dirty Jokes");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("Mascots");
+	private JButton button3 = new JButton("Small Children");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public QuestionTwo()
+	public QuestionFour()
 	{
-		label.setText("What is Johnny Depp afraid of?");
+		label.setText("What is banned in public places in Florida after 6 p.m.?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -53,9 +53,10 @@ public class QuestionTwo extends JFrame{
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
 		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button1.addActionListener(b -> QuestionThree.main(null));
-	  button1.addActionListener(b -> dispose());
+		button1.addActionListener(b -> QuestionFive.main(null));
+		button1.addActionListener(b -> dispose());
 		button1.addActionListener(b -> frame.dispose());
+	
 		
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
@@ -79,7 +80,7 @@ public class QuestionTwo extends JFrame{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		QuestionTwo frame = new QuestionTwo();
+		QuestionFour frame = new QuestionFour();
 		frame.setVisible(true);
 	}
 }

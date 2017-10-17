@@ -7,6 +7,7 @@ import java.awt.event.*;
 
 public class BaseQuestion extends JFrame{
 	
+	//This class is the base for every other question in the game. Every question follows this format.
 	private final int SIZE = 180;
 	private Container con = getContentPane();
 	private JButton button = new JButton("A Myriaannum");
@@ -23,18 +24,22 @@ public class BaseQuestion extends JFrame{
 	private Container con3 = getContentPane();
 	private JButton button3 = new JButton("A Century");
 
+	//These lines create the components needed to put the question together.
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
 	public BaseQuestion()
 	{
+		//This chunk is the code that displays the question in a JFrame.
 		label.setText("What is the word used to describe an indefinitely large number?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
-		
+
+		//The dispose part of this chunk and frame.dispose are two different commands, dispose closes the answer window, while frame.dispose
+		//closes the question window.
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
@@ -46,7 +51,8 @@ public class BaseQuestion extends JFrame{
 		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
 		button.addActionListener(a -> QuestionTwo.main(null));
 		button.addActionListener(a -> dispose());
-		
+		button.addActionListener(a -> frame.dispose());
+
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
 		con1.add(button1);
@@ -76,6 +82,10 @@ public class BaseQuestion extends JFrame{
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
 		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+
+		
+
+
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

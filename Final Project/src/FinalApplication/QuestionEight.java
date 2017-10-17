@@ -5,29 +5,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class QuestionTwo extends JFrame{
+public class QuestionEight extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("Rabbits");
+	private JButton button = new JButton("Treat Captured Criminals");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("Clowns");
+	private JButton button1 = new JButton("Use a Taser");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("Pirates");
+	private JButton button2 = new JButton("Sit Down");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("Mascots");
+	private JButton button3 = new JButton("Run");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public QuestionTwo()
+	public QuestionEight()
 	{
-		label.setText("What is Johnny Depp afraid of?");
+		label.setText("Washington police officers get a half hour class in how to what?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -52,11 +52,8 @@ public class QuestionTwo extends JFrame{
 		button1.setForeground(Color.WHITE);
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
-		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button1.addActionListener(b -> QuestionThree.main(null));
-	  button1.addActionListener(b -> dispose());
-		button1.addActionListener(b -> frame.dispose());
-		
+		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
 		con2.add(button2);
@@ -65,7 +62,10 @@ public class QuestionTwo extends JFrame{
 		button2.setForeground(Color.WHITE);
 		button2.setMnemonic(KeyEvent.VK_C);
 		button2.setActionCommand("2");
-		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button2.addActionListener(c -> QuestionNine.main(null));
+		button2.addActionListener(c -> dispose());
+		button2.addActionListener(c -> frame.dispose());
 		
 		setSize(SIZE3, SIZE3);
 		con3.setLayout(new FlowLayout());
@@ -79,7 +79,7 @@ public class QuestionTwo extends JFrame{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		QuestionTwo frame = new QuestionTwo();
+		QuestionEight frame = new QuestionEight();
 		frame.setVisible(true);
 	}
 }

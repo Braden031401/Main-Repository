@@ -5,11 +5,12 @@ import java.awt.*;
 import java.awt.event.*;
 import java.applet.*;
 import java.io.*;
+import java.net.URL;
 class Test extends JFrame implements ActionListener
 {
   String home = System.getProperty("user.home");
   JButton btn = new JButton("Play Sound");
-  File wavFile = new File(home + "/Downloads/boo.wav");
+  URL url = new URL(home + "/Downloads/boo.wav");
   AudioClip sound;
   @SuppressWarnings("deprecation")
 public Test()
@@ -22,7 +23,7 @@ public Test()
     jp.add(btn);
     getContentPane().add(jp);
     pack();
-    try{sound = Applet.newAudioClip(wavFile.toURL());}
+    try{sound = Applet.newAudioClip(url.toURI());}
     catch(Exception e){e.printStackTrace();}
   }
   public void actionPerformed(ActionEvent ae){sound.play();}
