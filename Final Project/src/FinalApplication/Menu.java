@@ -62,6 +62,7 @@ public class Menu extends JFrame {
 			con3.setBackground(Color.BLACK);
 			button3.setBackground(Color.BLUE);
 			button3.setForeground(Color.WHITE);
+			button3.addActionListener(d -> HighScoreTrick.main(null));
 		}
 		public static void main(String[] args)
 		{

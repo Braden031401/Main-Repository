@@ -42,7 +42,7 @@ public class QuestionSeventeen extends JFrame{
 		button.setForeground(Color.WHITE);
 		button.setMnemonic(KeyEvent.VK_A);
 		button.setActionCommand("0");
-		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -62,7 +62,7 @@ public class QuestionSeventeen extends JFrame{
 		button2.setForeground(Color.WHITE);
 		button2.setMnemonic(KeyEvent.VK_C);
 		button2.setActionCommand("2");
-		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Correct!"));
 		button2.addActionListener(c -> QuestionEighteen.main(null));
 		button2.addActionListener(c -> dispose());
 		button2.addActionListener(c -> frame.dispose());

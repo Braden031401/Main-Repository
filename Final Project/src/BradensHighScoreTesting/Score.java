@@ -14,15 +14,18 @@ public class Score {
 		// TODO Auto-generated method stub
 				 int attemptsNum = 0;
 				    final int maxAttempts = 1;
-				    int score = 500;
+				    int score = 100;
 					do {
 					score -= 10;
 					
 					JOptionPane.showMessageDialog(null, "-10");
 				    JOptionPane.showMessageDialog(null, "Your Score is "+ score);
-				    } while (++attemptsNum <maxAttempts);
+				    } while (++attemptsNum < maxAttempts);
 
 				    if (attemptsNum == maxAttempts);
+				    
+				    
+				    
 				    
 				    PrintWriter out = new PrintWriter("Score.txt");
 				    out.println(score);
