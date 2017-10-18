@@ -28,6 +28,7 @@ public class Score {
 				    out.println(score);
 					
 				    BaseQuestion.main(null);
+				    
 	}
 }
 
