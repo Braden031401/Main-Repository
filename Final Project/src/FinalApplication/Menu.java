@@ -43,10 +43,8 @@ public class Menu extends JFrame {
 			con.setBackground(Color.BLACK);
 			button.setBackground(Color.BLUE);
 			button.setForeground(Color.WHITE);
-			button.setMnemonic(KeyEvent.VK_M);
-			button.setActionCommand("go");
-			button.addActionListener(m -> Scores.main(null));
-			button.addActionListener(m -> dispose());
+			button.addActionListener(a -> Scores.main(null));
+			button.addActionListener(a -> dispose());
 			
 			//The System.exit(0) command tells the program that if this button is pressed, it needs to terminate itself.
 			setSize(SIZE2, SIZE2);
@@ -55,9 +53,7 @@ public class Menu extends JFrame {
 			con2.setBackground(Color.BLACK);
 			button2.setBackground(Color.BLUE);
 			button2.setForeground(Color.WHITE);
-			button2.setMnemonic(KeyEvent.VK_E);
-			button2.setActionCommand("stop");
-			button2.addActionListener(e -> System.exit(0));
+			button2.addActionListener(b -> System.exit(0));
 			
 			//High Score button, click to see top 5 scores.
 			setSize(SIZE3, SIZE3);
@@ -66,9 +62,6 @@ public class Menu extends JFrame {
 			con3.setBackground(Color.BLACK);
 			button3.setBackground(Color.BLUE);
 			button3.setForeground(Color.WHITE);
-			button3.setMnemonic(KeyEvent.VK_D);
-			button3.setActionCommand("stop");
-			
 		}
 		public static void main(String[] args)
 		{

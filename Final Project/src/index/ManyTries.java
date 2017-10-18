@@ -1,6 +1,8 @@
 package index;
 
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 //I found this on stock overflow this is not mine
 public class ManyTries {
 
@@ -8,24 +10,19 @@ public class ManyTries {
 	{
 		// TODO Auto-generated method stub
 		 int attemptsNum = 0;
-		    final int maxAttempts = 3;
+		    final int maxAttempts = 1;
 		    int user;
 			int comp;
 			do {
-		        System.out.print("Guess a number between 1 and 10: ");
-		        Scanner input = new Scanner(System.in);
-				user = input.nextInt();
+		        
+		       
+		            
+		       
+		    } while (++attemptsNum <maxAttempts );
 
-		        if (user > comp)
-		            System.out.println("My number is less than " + user + ".");
-		        else if (user < comp)
-		            System.out.println("My number is greater than " + user + ".");
-		        else
-		            System.out.println("Correct! " + comp + " was my number! ");
-		    } while (user != comp && ++attemptsNum <maxAttempts );
-
-		    if (attemptsNum == maxAttempts)
-		        System.out.println("You loose. The number was: " + comp);
+		    if (attemptsNum == maxAttempts);
+		    JOptionPane.showMessageDialog(null, "It works");
+		        
 
 	}
 
