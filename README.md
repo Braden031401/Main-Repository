@@ -1,3 +1,3 @@
 # Main-Repository
-<img src=Diagram.PNG 
-  height=300 width=300>
+<img src="img/Diagram.PNG" 
+  height="300" width="300">
