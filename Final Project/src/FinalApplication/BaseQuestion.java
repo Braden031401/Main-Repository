@@ -56,6 +56,8 @@ public class BaseQuestion extends JFrame{
 		button.addActionListener(a -> dispose());
 		button.addActionListener(a -> frame.dispose());
 
+		
+		//This button calls the failure of a scoring system we have.
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
 		con1.add(button1);

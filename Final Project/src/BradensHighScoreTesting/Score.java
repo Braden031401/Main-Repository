@@ -11,7 +11,7 @@ public class Score {
 		
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		// TODO Auto-generated method stub
+		// This method attempts to calculate the score. but it ended up being too difficult.
 				 int attemptsNum = 0;
 				    final int maxAttempts = 1;
 				    int score = 100;
