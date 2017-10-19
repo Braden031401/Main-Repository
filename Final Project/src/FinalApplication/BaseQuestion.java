@@ -2,15 +2,13 @@ package FinalApplication;
 
 import javax.swing.*;
 
-import BradensHighScoreTesting.Score;
 
 import java.awt.*;
 import java.awt.event.*;
 import java.io.FileNotFoundException;
 
 public class BaseQuestion extends JFrame{
-	
-	//This class is the base for every other question in the game. Every question follows this format.
+
 	private final int SIZE = 180;
 	private Container con = getContentPane();
 	private JButton button = new JButton("A Myriaannum");
@@ -33,7 +31,7 @@ public class BaseQuestion extends JFrame{
 	JLabel label= new JLabel();
 	public BaseQuestion()
 	{
-		//This chunk is the code that displays the question in a JFrame.
+
 		label.setText("What is the word used to describe an indefinitely large number?");
 		panel.add(label);
 		frame.add(panel);
@@ -41,8 +39,6 @@ public class BaseQuestion extends JFrame{
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 
-		//The dispose part of this chunk and frame.dispose are two different commands, dispose closes the answer window, while frame.dispose
-		//closes the question window.
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
@@ -53,6 +49,14 @@ public class BaseQuestion extends JFrame{
 		button.setActionCommand("0");
 		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
 		button.addActionListener(a -> QuestionTwo.main(null));
+		button.addActionListener(a -> {
+			try {
+				Score.main();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 		button.addActionListener(a -> dispose());
 		button.addActionListener(a -> frame.dispose());
 
@@ -87,7 +91,7 @@ public class BaseQuestion extends JFrame{
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
 		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
-
+			
 		
 
 

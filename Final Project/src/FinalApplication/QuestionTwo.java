@@ -2,8 +2,11 @@ package FinalApplication;
 
 import javax.swing.*;
 
+import index.Score;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileNotFoundException;
 
 public class QuestionTwo extends JFrame{
 	private final int SIZE = 180;
@@ -54,8 +57,9 @@ public class QuestionTwo extends JFrame{
 		button1.setActionCommand("1");
 		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
 		button1.addActionListener(b -> QuestionThree.main(null));
-	  button1.addActionListener(b -> dispose());
+    button1.addActionListener(b -> dispose());
 		button1.addActionListener(b -> frame.dispose());
+
 		
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());

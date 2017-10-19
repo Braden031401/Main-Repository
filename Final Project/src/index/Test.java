@@ -1,32 +1,35 @@
 package index;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.applet.*;
-import java.io.*;
-import java.net.URL;
-class Test extends JFrame implements ActionListener
-{
-  String home = System.getProperty("user.home");
-  JButton btn = new JButton("Play Sound");
-  URL url = new URL(home + "/Downloads/boo.wav");
-  AudioClip sound;
-  @SuppressWarnings("deprecation")
-public Test()
-  {
-    setSize(300,100);
-    setLocation(400,300);
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
-    JPanel jp = new JPanel();
-    btn.addActionListener(this);
-    jp.add(btn);
-    getContentPane().add(jp);
-    pack();
-    try{sound = Applet.newAudioClip(url.toURI());}
-    catch(Exception e){e.printStackTrace();}
-  }
-  public void actionPerformed(ActionEvent ae){sound.play();}
-  public static void main(String args[]){new Test().setVisible(true);}
+import javax.swing.JOptionPane;
+
+class Test {
+	public static void main(String[] question, String[] answer, int n)
+	{
+		 String[] name = new String[n];  // Player Names
+		    int[] playerscore = new int[n]; // Argument for Score
+		    String[] que = new String[question.length]; //Questions for Loops
+		    int score = 0; // Declare the score
+		    
+		    /* --------------------------- For loop for number of players --------------------------- */
+		    for (int i = 0; i < n; i++) {
+		        name[i] = JOptionPane.showInputDialog("What is your name player" + (i + 1) + "?");
+		        JOptionPane.showMessageDialog(null, "Hello :" + name[i] + " Player number " + (i + 1) + ". I hope your ready to start!");
+		        
+		        /* --------------------------- Loop in Loop for questions --------------------------- */
+		        for (int x = 0; x < question.length; x++) {
+		            que[x] = JOptionPane.showInputDialog(question[x]);
+
+		            if (que[x].equals(answer[x])) {
+		                playerscore[i] = playerscore[i] + 1;
+		            } else {
+		                JOptionPane.showMessageDialog(null, "Wrong!");
+		            }
+
+		        } // End for loop for Question
+		        playerscore[i] = score;
+		        System.out.println("\nPlayer" + (i) + "Name:" + name[i] + "\tScore" + score);
+	}
+
+
 }
-//c:\\Windows\\media\\ding.wav
+}
