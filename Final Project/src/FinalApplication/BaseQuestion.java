@@ -60,6 +60,8 @@ public class BaseQuestion extends JFrame{
 		button.addActionListener(a -> dispose());
 		button.addActionListener(a -> frame.dispose());
 
+		
+		//This button calls the failure of a scoring system we have.
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
 		con1.add(button1);
@@ -68,16 +70,7 @@ public class BaseQuestion extends JFrame{
 		button1.setForeground(Color.WHITE);
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
-		button1.addActionListener(b -> {
-			try {
-				Score.main(null);
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		});
-		button1.addActionListener(b -> dispose());
-		button1.addActionListener(b -> frame.dispose());
+		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 		
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
